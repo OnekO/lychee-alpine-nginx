@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+    lychee:
+        build: . 
+        container_name: "lychee"
+        environment:
+            - VIRTUAL_HOST=lychee.lan
+            - MYSQL_HOST=db
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=lalala
+            - MYSQL_PREFIX=
+        volumes:
+            - ./data/import/:/var/www/Lychee/uploads/import/
+        ports:
+            - "10880:80"
+
+networks:
+    default:
+        external:
+            name: proxied
