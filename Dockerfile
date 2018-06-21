@@ -78,7 +78,7 @@ RUN ln -sf /dev/stderr /var/log/php7/error.log
 
 USER www-data
 WORKDIR /var/www
-RUN git clone https://github.com/electerious/Lychee.git
+RUN git clone https://github.com/OnekO/Lychee.git
 WORKDIR /var/www/Lychee
 #RUN chown nobody:nobody uploads data && chmod -R 777 uploads/ data/
 
