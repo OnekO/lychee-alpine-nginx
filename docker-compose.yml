@@ -11,7 +11,7 @@ services:
             - MYSQL_PASSWORD=lalala
             - MYSQL_PREFIX=
         volumes:
-            - ./data/import/:/var/www/Lychee/uploads/import/
+            - ./data/uploads/:/var/www/Lychee/uploads
         ports:
             - "10880:80"
 

@@ -1,5 +1,5 @@
 #!/bin/sh
-STARTED="/var/www/Lychee/uploads/import/.STARTED"
+STARTED="/var/www/Lychee/uploads/.STARTED"
 if [ ! -e $STARTED ]; then
     touch $STARTED
     echo "Ejecuto"
