@@ -75,6 +75,8 @@ RUN chmod 777 /init.sh && chmod 777 /var/www
 ADD supervisord.conf /etc/supervisord.conf
 RUN ln -sf /dev/stdout /var/log/nginx/lychee_access.log && ln -sf /dev/stderr /var/log/nginx/lychee_error.log
 RUN ln -sf /dev/stderr /var/log/php7/error.log
+RUN chown -R www-data:www-data /var/tmp/nginx
+
 
 USER www-data
 WORKDIR /var/www
