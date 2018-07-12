@@ -13,7 +13,7 @@ RUN apk --no-cache add \
     php7-json \
     php7-mbstring \
     php7-mysqli \
-#    php7-opcache \
+    php7-opcache \
     php7-session \
     php7-imagick \
     imagemagick \
@@ -95,4 +95,5 @@ ENV MYSQL_PASSWORD "lychee"
 ENV MYSQL_NAME "lychee"
 ENV MYSQL_PREFIX ""
 USER root
+EXPOSE 80
 ENTRYPOINT /init.sh
