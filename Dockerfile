@@ -81,6 +81,7 @@ RUN chown -R www-data:www-data /var/tmp/nginx
 USER www-data
 WORKDIR /var/www
 RUN git clone https://github.com/LycheeOrg/Lychee.git
+RUN git submodule init ; git submodule update
 WORKDIR /var/www/Lychee
 #RUN chown nobody:nobody uploads data && chmod -R 777 uploads/ data/
 
