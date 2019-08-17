@@ -80,7 +80,7 @@ RUN chown -R www-data:www-data /var/tmp/nginx
 
 USER www-data
 WORKDIR /var/www
-RUN git clone https://github.com/OnekO/Lychee.git
+RUN git clone https://github.com/LycheeOrg/Lychee.git
 WORKDIR /var/www/Lychee
 #RUN chown nobody:nobody uploads data && chmod -R 777 uploads/ data/
 
